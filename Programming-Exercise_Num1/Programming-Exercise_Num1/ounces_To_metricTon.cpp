@@ -9,16 +9,20 @@ int main() { //Main function
 	double weight_ounces = 0;
 	double weight_metricTons = 0;
 	double numOfboxes = 0;
-	//display user with question and read input
-	cout << "Please enter the weight of the breakfast cereal in ounces: ";
-	cin >> weight_ounces;
-	//calculate
-	weight_metricTons = weight_ounces / metricTon;
-	cout << "The weight of the cereal in metric tons is: " << weight_metricTons;
-	//calculate the number of boxes to yield one metric ton of cereal
-	numOfboxes = metricTon / weight_ounces;
-	cout << "\nThe number of boxes to yield one metric ton is: " << numOfboxes << endl;
-
+	char cont;
+	do {
+		//display user with question and read input
+		cout << "Please enter the weight of the breakfast cereal in ounces: ";
+		cin >> weight_ounces;
+		//calculate
+		weight_metricTons = weight_ounces / metricTon;
+		cout << "The weight of the cereal in metric tons is: " << weight_metricTons;
+		//calculate the number of boxes to yield one metric ton of cereal
+		numOfboxes = metricTon / weight_ounces;
+		cout << "\nThe number of boxes to yield one metric ton is: " << numOfboxes << endl;
+		cout << "\nWould you like to continue (y/n)? ";
+		cin >> cont;
+	} while (cont == 'y');
 	system("pause");
 	return 0;
 }
